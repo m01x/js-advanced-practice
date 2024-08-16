@@ -1,7 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
-import { environmentsComponents } from './src/concepts/01-environments'
+import { asyncComponent } from './src/concepts/async'
 import { callbacksComponent } from './src/concepts/callbacks'
 
 document.querySelector('#app').innerHTML = `
@@ -21,4 +21,7 @@ document.querySelector('#app').innerHTML = `
 
 const element = document.querySelector('.card')
 //environmentsComponents(element)
-callbacksComponent(element)
+//callbacksComponent(element)
+//promiseComponent(element)
+//promiseRaceComonent(element)
+asyncComponent(element)
