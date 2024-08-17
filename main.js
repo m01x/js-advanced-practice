@@ -1,8 +1,10 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { asyncAwaitComponent } from './src/concepts/async-await'
-import { callbacksComponent } from './src/concepts/callbacks'
+import './style.css';
+import javascriptLogo from './javascript.svg';
+import viteLogo from '/vite.svg';
+import { asyncAwaitComponent } from './src/concepts/async-await';
+import { callbacksComponent } from './src/concepts/callbacks';
+import { asyncAwait2Component } from './src/concepts/async-await-nosec';
+import { forAwaitComponent } from './src/concepts/for-await';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -17,11 +19,13 @@ document.querySelector('#app').innerHTML = `
     </div>
    
   </div>
-`
+`;
 
-const element = document.querySelector('.card')
+const element = document.querySelector('.card');
 //environmentsComponents(element)
 //callbacksComponent(element)
 //promiseComponent(element)
 //promiseRaceComonent(element)
-asyncAwaitComponent(element)
+//asyncAwaitComponent(element)
+//asyncAwait2Component(element);
+forAwaitComponent(element);
