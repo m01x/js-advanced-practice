@@ -5,12 +5,13 @@ import { heroes } from '../data/heroes';
  */
 export const forAwaitComponent = async element => {
   const id = `5d86371f9f80b591f499df32`;
-  if (await getHeroAsync(id)) {
-    element.innerHTML = 'Si existe ese heroe';
-    return;
-  }
+  const heroIds = heroes.map(hero => hero.id);
 
-  element.innerHTML = 'No existe ese heroe, revisar id';
+  const heroPromises = getHeroesAsync(heroIds);
+
+  for await (const hero of heroPromises) {
+    element.innerHTML += `${hero.name} <br/>`;
+  }
 };
 
 /**

@@ -5,6 +5,8 @@ import { asyncAwaitComponent } from './src/concepts/async-await';
 import { callbacksComponent } from './src/concepts/callbacks';
 import { asyncAwait2Component } from './src/concepts/async-await-nosec';
 import { forAwaitComponent } from './src/concepts/for-await';
+import { generatorFunctionsComponent } from './src/concepts/generators';
+import { generatorAsyncComponent } from './src/concepts/generators-async';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -28,4 +30,5 @@ const element = document.querySelector('.card');
 //promiseRaceComonent(element)
 //asyncAwaitComponent(element)
 //asyncAwait2Component(element);
-forAwaitComponent(element);
+//forAwaitComponent(element);
+generatorAsyncComponent(element);
